@@ -12,13 +12,14 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import dagger.android.AndroidInjectionModule;
 
 /**
  * Created by ArmsTeam on 2017/10/1.
  * Dagger LifecycleModule
  */
 
-@Module
+@Module(includes = AndroidInjectionModule.class)
 public class LifecycleModule {
     private Application mApplication;
 
